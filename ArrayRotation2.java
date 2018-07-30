@@ -21,17 +21,11 @@ public class ArrayRotation2 {
 		/*
 		 * Take the first element to temp variable
 		 */
-		int temp = arr[0];
-		for(int i=0;i<n;i++){
-			/*
-			 * To Last index copy the temp value i.e., the first element
-			 */
-			if(i+1 == n){
-				arr[i]=temp;
-			} else {//copy next index element to current index
-				arr[i]=arr[i+1];
-			}
+		int i,temp = arr[0];
+		for(i=0;i<n-1;i++){
+			arr[i]=arr[i+1];
 		}
+		arr[i]=temp;
 		return arr;
 	}
 	/*
