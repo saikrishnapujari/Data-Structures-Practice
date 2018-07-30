@@ -8,14 +8,14 @@ public class ArrayRotation1 {
 	public int[] rotate(int[] arr,int d,int n){
 		int[] temp = new int[d];
 		
-		for(int i=0;i<arr.length;i++){
+		for(int i=0;i<n;i++){
 			if(i<d){
 				temp[i]=arr[i];
 			}
-			if(!(i+d>=arr.length)){
+			if(!(i+d>=n)){
 				arr[i]=arr[i+d];
 			}else{
-				arr[i]=temp[(i+d)-arr.length];
+				arr[i]=temp[(i+d)-n];
 			}
 		}
 		return arr;
